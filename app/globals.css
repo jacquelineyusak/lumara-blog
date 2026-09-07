@@ -127,7 +127,7 @@ h1 em, h2 em { color: var(--copper); font-weight: 390; }
 .page-heading { padding: 92px 0 46px; }
 .page-heading h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(3rem, 6vw, 5.8rem); }
 .page-heading p:not(.eyebrow) { max-width: 620px; margin: 0; color: #655765; font-size: 1.12rem; }
-.category-stories { padding-bottom: 50px; }
+.category-stories { padding: 68px 0 50px; }
 .article-shell { padding: 76px 0 30px; }
 .article-header { max-width: 900px; margin: 0 auto 56px; text-align: center; }
 .article-header h1 { margin-bottom: 20px; font-size: clamp(3rem, 7vw, 6.4rem); }
