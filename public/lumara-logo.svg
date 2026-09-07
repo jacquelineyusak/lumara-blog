@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 144" role="img" aria-labelledby="title desc">
+  <title id="title">Lumara</title>
+  <desc id="desc">Lumara wordmark in uppercase geometric lettering</desc>
+  <defs>
+    <linearGradient id="lumara-purple" x1="0" y1="0" x2="0" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75447C"/>
+      <stop offset="1" stop-color="#4A2452"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#lumara-purple)">
+    <path d="M0 0h18v126h66v18H0z"/>
+    <path d="M134 0h18v86c0 28 15 43 39 43s39-15 39-43V0h18v87c0 38-23 57-57 57s-57-19-57-57z"/>
+    <path d="M303 0h18l51 113L423 0h19v144h-18V36l-44 108h-16L321 36v108h-18z"/>
+    <path fill-rule="evenodd" d="M549 0h18l56 144h-20l-16-42h-58l-16 42h-20L549 0zm9 26-23 59h46l-23-59z"/>
+    <path fill-rule="evenodd" d="M672 0h61c35 0 52 18 52 46 0 21-11 37-31 43l35 55h-22l-32-51h-45v51h-18V0zm18 17v59h42c23 0 35-10 35-30s-12-29-35-29h-42z"/>
+    <path fill-rule="evenodd" d="M886 0h18l56 144h-20l-16-42h-58l-16 42h-20L886 0zm9 26-23 59h46l-23-59z"/>
+  </g>
+</svg>
