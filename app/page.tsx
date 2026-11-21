@@ -2,6 +2,9 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import { BlogCard, CategoryNav, Header, PageContainer, SiteFooter } from "@/components/blog-ui";
 import { getCategories, getHomepagePosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata = pageMetadata("Bookkeeping, Tax & Compliance Guides for Bali", "Practical guides to business records, bookkeeping, tax preparation and compliance for PT PMA companies and local businesses in Bali.");
 
 export const revalidate = 3600;
 

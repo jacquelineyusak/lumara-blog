@@ -13,7 +13,9 @@ export type Post = {
   excerpt: string;
   coverImage: string;
   date: string;
+  updated: string | null;
   formattedDate: string;
+  formattedUpdated: string | null;
   readingTime: number;
   author: Author;
   categorySlug: string | null;
@@ -44,7 +46,8 @@ function readingTime(value: string) {
 }
 
 function published(value: string) {
-  return new Date(`${value}T23:59:59Z`) <= new Date();
+  // A date becomes public at the start of that day in Bali, not after it ends.
+  return new Date(`${value}T00:00:00+08:00`) <= new Date();
 }
 
 function entries(directory: string) {
@@ -82,7 +85,9 @@ function readPost(filePath: string, category: Category | null): Post | null {
     excerpt: String(data.excerpt ?? ""),
     coverImage: publicAsset(String(data.coverImage ?? "/assets/blog/lumara-editorial.png")),
     date: data.date,
+    updated: typeof data.updated === "string" ? data.updated : null,
     formattedDate: formatDate(data.date),
+    formattedUpdated: typeof data.updated === "string" ? formatDate(data.updated) : null,
     readingTime: readingTime(content),
     author: { name: author.name, picture: publicAsset(author.picture) },
     categorySlug,
@@ -117,4 +122,4 @@ export function getPostsByCategory(slug: string) { return getAllPosts().filter((
 export function getPostBySlug(slug: string) { return getAllPosts().find((post) => !post.categorySlug && post.slug === slug) ?? null; }
 export function getPostByCategoryAndSlug(category: string, slug: string) { return getAllPosts().find((post) => post.categorySlug === category && post.slug === slug) ?? null; }
 export async function markdownToHtml(content: string) { return String(await remark().use(remarkGfm).use(remarkHtml).process(content)); }
-export function siteUrl() { return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/blog"; }
+export { siteUrl } from "./site-url";

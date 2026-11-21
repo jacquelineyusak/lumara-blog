@@ -30,10 +30,16 @@ The app includes topic archives, article pages, an RSS feed, a sitemap, robots m
 
 Create a Vercel project for this folder and deploy with the default Next.js settings. The included `vercel.json` keeps the build explicit.
 
-Set `NEXT_PUBLIC_SITE_URL` to the public `/blog` URL of the deployment, for example:
+Set `NEXT_PUBLIC_SITE_URL` to the public blog URL (the URL visitors and search engines use), not the separate Vercel deployment origin:
 
 ```text
-https://www.example.com/blog
+https://lumara.id/blog
 ```
 
 For the main Lumara Vercel project, set `BLOG_ORIGIN` to the blog deployment origin. The main app already rewrites `/blog` and `/blog/*` to this project.
+
+If `NEXT_PUBLIC_SITE_URL` is absent, metadata defaults to `https://lumara.id/blog`. Both `https://lumara.id` and `https://lumara.id/blog` normalize to this blog URL. A production build rejects local or insecure public URLs, and the post-build check verifies generated canonical URLs, social images, and article structured data.
+
+Run `pnpm lint`, `pnpm test`, and `pnpm build` before deployment. The existing Vercel npm install/build workflow is preserved. On the main domain, advertise `https://lumara.id/blog/sitemap.xml` in the root robots file alongside the marketing sitemap; a robots file under `/blog` does not replace the root crawler policy.
+
+Posts support an optional `updated: "YYYY-MM-DD"` frontmatter value. Use it only for real content changes. It is shown on the article and used in structured data and the sitemap; rebuilding does not change content dates. Author bylines link to Jacqueline Yusak’s profile on the main site. For regulatory content, link relevant official sources and verify applicability before publishing rates or deadlines.

@@ -3,8 +3,9 @@ title: "A clearer start: the first 30 days of a well-organized business"
 excerpt: "The habits you establish early shape every report, deadline, and decision that follows. Here is a practical first-month rhythm for a new or growing company."
 coverImage: "/assets/blog/lumara-editorial.png"
 date: "2026-08-28"
+updated: "2026-11-09"
 author:
-  name: "Jacqueline"
+  name: "Jacqueline Yusak"
   picture: "/assets/blog/jacqueline.jpg"
 ---
 
@@ -42,3 +43,19 @@ Recurring tax and compliance deadlines should live somewhere you will actually l
 At the end of the first month, set aside time to reconcile your records, gather missing documents, and note anything that changed. The close does not need to be elaborate. It is simply a moment to turn a month of activity into a useful picture of the business.
 
 That picture becomes much more valuable when you repeat it every month.
+
+
+## A practical first-month plan
+
+Use these milestones as an internal setup plan, adjusting them to the size of the business:
+
+| When | Action | Useful output |
+| --- | --- | --- |
+| First week | List the accounts, document sources and people involved | One account inventory and a named contact for each source |
+| Second week | Agree folders, document names and the handover process | A shared record structure and a list of missing information |
+| Third week | Review transactions and clarify exceptions | A working register with questions assigned to owners |
+| Month-end | Reconcile the available records and review the next steps | A close pack, open-items list and next-month timetable |
+
+If the company has earlier trading activity, do not treat the first month with a new provider as the start of its history. Identify the last reconciled period and bring forward the supporting balances and outstanding questions. The [switching-accountants checklist](/blog/foundations/switching-accountants) explains what to request.
+
+For recurring support, compare [Lumara’s bookkeeping, tax and compliance services](https://lumara.id/services). Agree which work is included and which responsibilities remain with your team before the first handover.

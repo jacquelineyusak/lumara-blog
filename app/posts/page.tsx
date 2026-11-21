@@ -1,5 +1,8 @@
 import { BlogCard, CategoryNav, Header, PageContainer, SiteFooter } from "@/components/blog-ui";
 import { getCategories, getAllPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata = pageMetadata("All Business Guides", "Browse Lumara’s practical guides to bookkeeping, tax preparation and compliance for businesses in Bali.", "/posts");
 
 export const revalidate = 3600;
 

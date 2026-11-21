@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/article-page";
-import { getAllPosts, getPostByCategoryAndSlug, siteUrl } from "@/lib/blog";
+import { getAllPosts, getPostByCategoryAndSlug } from "@/lib/blog";
+import { postMetadata } from "@/lib/metadata";
 
 export const revalidate = 3600;
 
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category, slug } = await params;
   const post = getPostByCategoryAndSlug(category, slug);
   if (!post) return {};
-  return { title: post.title, description: post.excerpt, alternates: { canonical: `${siteUrl()}${post.routePath}` }, openGraph: { type: "article", title: post.title, description: post.excerpt, publishedTime: post.date, authors: [post.author.name], images: [{ url: post.coverImage }] } };
+  return postMetadata(post);
 }
 
 export default async function CategoryPostPage({ params }: { params: Promise<{ category: string; slug: string }> }) {
