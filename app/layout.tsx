@@ -3,8 +3,9 @@ import "@fontsource-variable/fraunces/wght.css";
 import "@fontsource-variable/fraunces/wght-italic.css";
 import "@fontsource-variable/manrope/wght.css";
 import "./globals.css";
+import { siteUrl } from "@/lib/site-url";
 
-const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/blog";
+const publicSiteUrl = siteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(new URL(publicSiteUrl).origin),
