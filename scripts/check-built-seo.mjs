@@ -2,7 +2,11 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 
-const output = path.join(process.cwd(), ".next/server/app");
+// A plain `next build` writes the documents to server/app. On Vercel, NEXT_ADAPTER_PATH
+// is set and Next stores those same documents under server/route-cache instead.
+const outputRoots = ["app", "route-cache"]
+  .map((name) => path.join(process.cwd(), ".next/server", name))
+  .filter((directory) => fs.existsSync(directory));
 function htmlFiles(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const filename = path.join(directory, entry.name);
@@ -12,7 +16,7 @@ function htmlFiles(directory) {
 
 let pages = 0;
 let articles = 0;
-for (const filename of htmlFiles(output)) {
+for (const filename of outputRoots.flatMap((directory) => htmlFiles(directory))) {
   if (path.basename(filename).startsWith("_")) continue;
   const html = fs.readFileSync(filename, "utf8");
   if (/<meta name="robots" content="[^"]*noindex/.test(html)) continue;
@@ -38,5 +42,5 @@ for (const filename of htmlFiles(output)) {
   }
   pages++;
 }
-assert.ok(pages > 0 && articles >= 7, "Expected generated blog archives and articles");
+assert.ok(pages > 0 && articles >= 7, `Expected generated blog archives and articles, found ${pages} pages and ${articles} articles`);
 console.log(`SEO build check passed: ${pages} pages, ${articles} articles, public canonicals and linked author schemas.`);
