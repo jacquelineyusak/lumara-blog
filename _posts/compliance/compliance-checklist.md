@@ -44,4 +44,4 @@ Choose a regular internal review suitable for the business. Check open items, up
 
 For company activity and licensing guidance, use the relevant current material in the [official OSS guide directory](https://oss.go.id/id/panduan). This register is an organizational tool; the company’s exact legal obligations require confirmation for its circumstances.
 
-Lumara provides [business compliance and LKPM support](https://lumara.id/services/compliance). If reporting is the next priority, start with the [LKPM preparation checklist](/blog/compliance/lkpm-notes).
+Lumara provides [business compliance and LKPM support](https://lumara.id/services#compliance). If reporting is the next priority, start with the [LKPM preparation checklist](/blog/compliance/lkpm-notes).

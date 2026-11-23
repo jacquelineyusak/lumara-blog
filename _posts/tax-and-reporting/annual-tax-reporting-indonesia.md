@@ -1,7 +1,8 @@
 ---
 title: "Annual Tax Reporting in Indonesia for Companies and Individuals"
 excerpt: "Plan annual tax reporting in Indonesia with a guide to corporate and individual returns, year-end payroll reconciliation, deadlines and the records to keep."
-coverImage: "/assets/blog/lumara-editorial.png"
+coverImage: "/assets/blog/annual-tax-guide.webp"
+coverImageAlt: "Ordinary annual tax timeline for a 31 December tax year-end: BPA1 within one month of the final payroll period, individual returns by 31 March, corporate returns by 30 April."
 date: "2026-11-23"
 updated: "2026-11-23"
 author:

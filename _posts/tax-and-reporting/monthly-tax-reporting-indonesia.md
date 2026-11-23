@@ -1,7 +1,8 @@
 ---
 title: "Monthly Tax Reporting in Indonesia for Businesses"
 excerpt: "A practical guide to monthly tax reporting in Indonesia for PT PMA and local companies, covering payroll, withholding, VAT and corporate tax instalments."
-coverImage: "/assets/blog/lumara-editorial.png"
+coverImage: "/assets/blog/monthly-tax-guide.webp"
+coverImageAlt: "Monthly tax workflow: reconcile records, check tax treatment, then keep payment and filing evidence."
 date: "2026-11-23"
 updated: "2026-11-23"
 author:
@@ -55,6 +56,8 @@ If several of these situations apply to your company, Lumara can help you agree 
 2. **Set aside transactions that need a decision.** Flag new suppliers, overseas fees, unusual pay items, leases, construction invoices and contracts that bundle several services. Record who will confirm the tax treatment and by when.
 3. **Assign the work.** Agree who prepares the calculations, who authorises payments, who files the returns and who follows up on missing records. Track deadlines by obligation and period. [Monthly tax calendar template](/blog/tax-and-reporting/tax-calendar)
 4. **Save the evidence together.** Keep the relevant invoices, contracts, calculations, withholding certificates, payment confirmations and filing receipts with the period they support. [Tax-ready records checklist](/blog/tax-and-reporting/tax-ready)
+
+Use the records you reconcile each month to plan the company return and final-period payroll. If you also need to file a personal return, check its timing separately. [Annual tax reporting in Indonesia](/blog/tax-and-reporting/annual-tax-reporting-indonesia)
 
 ## Discuss your monthly tax responsibilities with Lumara
 

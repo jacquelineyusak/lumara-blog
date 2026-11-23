@@ -55,4 +55,4 @@ Keep a visible exceptions list for unresolved items. A row marked “waiting for
 
 Do not close a task simply because the preparer has finished the draft. Store approval, payment and submission evidence where the next person can find it, and distinguish completed tasks from those awaiting acknowledgement or correction.
 
-Lumara’s [tax reporting service](https://lumara.id/services/tax-reporting) starts with an agreed scope and filing types. If records are still being assembled, use the [tax-ready records checklist](/blog/tax-and-reporting/tax-ready) before setting the first working calendar.
+Lumara’s [tax reporting service](https://lumara.id/services#tax-reporting) starts with an agreed scope and filing types. If records are still being assembled, use the [tax-ready records checklist](/blog/tax-and-reporting/tax-ready) before setting the first working calendar.

@@ -6,16 +6,27 @@ import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 
 export type Author = { name: string; picture: string };
-export type Category = { slug: string; title: string; description: string; routePath: string };
+export type Category = {
+  slug: string;
+  title: string;
+  seoTitle: string | null;
+  description: string;
+  featured: string[];
+  routePath: string;
+};
 export type Post = {
   slug: string;
   title: string;
+  seoTitle: string | null;
   excerpt: string;
   coverImage: string;
+  coverImageAlt: string;
   date: string;
   updated: string | null;
   formattedDate: string;
   formattedUpdated: string | null;
+  sourcesChecked: string | null;
+  formattedSourcesChecked: string | null;
   readingTime: number;
   author: Author;
   categorySlug: string | null;
@@ -27,10 +38,21 @@ export type Post = {
 const postsDirectory = path.join(process.cwd(), "_posts");
 const categoryFile = "_category.md";
 const basePath = "/blog";
+export const defaultCoverImage = `${basePath}/assets/blog/lumara-editorial.webp`;
 
 function publicAsset(value: string) {
   if (value.startsWith(basePath)) return value;
   return `${basePath}${value.startsWith("/") ? value : `/${value}`}`;
+}
+
+function optionalText(value: unknown): string | null {
+  return typeof value === "string" ? value.trim() || null : null;
+}
+
+function dateOnly(value: unknown): string | null {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const date = new Date(`${value}T00:00:00Z`);
+  return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value ? value : null;
 }
 
 function titleize(value: string) {
@@ -68,7 +90,9 @@ export function getCategories(): Category[] {
       return {
         slug: entry.name,
         title: typeof data.title === "string" ? data.title : titleize(entry.name),
+        seoTitle: optionalText(data.seoTitle),
         description: typeof data.description === "string" ? data.description : "",
+        featured: Array.isArray(data.featured) ? data.featured.filter((slug): slug is string => typeof slug === "string") : [],
         routePath: `/${entry.name}`,
       };
     })
@@ -82,16 +106,24 @@ function readPost(filePath: string, category: Category | null): Post | null {
   if (typeof data.date !== "string" || !published(data.date)) return null;
   const author = data.author as Record<string, unknown> | undefined;
   if (!author || typeof author.name !== "string" || typeof author.picture !== "string") return null;
+  const coverImage = publicAsset(optionalText(data.coverImage) ?? defaultCoverImage);
+  const editorial = data.editorial as Record<string, unknown> | undefined;
+  const updated = dateOnly(data.updated);
+  const sourcesChecked = dateOnly(editorial?.sourcesChecked);
   const categorySlug = category?.slug ?? null;
   return {
     slug,
     title: String(data.title ?? titleize(slug)),
+    seoTitle: optionalText(data.seoTitle) ?? optionalText(editorial?.suggestedSeoTitle),
     excerpt: String(data.excerpt ?? ""),
-    coverImage: publicAsset(String(data.coverImage ?? "/assets/blog/lumara-editorial.png")),
+    coverImage: coverImage === `${basePath}/assets/blog/lumara-editorial.png` ? defaultCoverImage : coverImage,
+    coverImageAlt: optionalText(data.coverImageAlt) ?? "",
     date: data.date,
-    updated: typeof data.updated === "string" ? data.updated : null,
+    updated,
     formattedDate: formatDate(data.date),
-    formattedUpdated: typeof data.updated === "string" ? formatDate(data.updated) : null,
+    formattedUpdated: updated ? formatDate(updated) : null,
+    sourcesChecked,
+    formattedSourcesChecked: sourcesChecked ? formatDate(sourcesChecked) : null,
     readingTime: readingTime(content),
     author: { name: author.name, picture: publicAsset(author.picture) },
     categorySlug,

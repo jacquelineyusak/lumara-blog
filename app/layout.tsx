@@ -3,6 +3,7 @@ import "@fontsource-variable/fraunces/wght.css";
 import "@fontsource-variable/fraunces/wght-italic.css";
 import "@fontsource-variable/manrope/wght.css";
 import "./globals.css";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import { siteUrl } from "@/lib/site-url";
 
 const publicSiteUrl = siteUrl();
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         {children}
+        <AnalyticsConsent measurementId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );

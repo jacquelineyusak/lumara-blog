@@ -37,4 +37,4 @@ If an error is found after a close, keep a record of the correction and tell the
 
 The routine should reflect transaction volume, number of accounts, the quality of incoming documents and the people involved. A provider can only work efficiently when the business supplies the agreed information and answers questions promptly.
 
-See [Lumara’s bookkeeping scope](https://lumara.id/services/bookkeeping) and the [bookkeeping cost guide](/blog/foundations/bookkeeping-costs-bali) for the starting price and its limits. If records are scattered, begin with the [clean-start checklist](/blog/foundations/clean-start).
+See [Lumara’s bookkeeping scope](https://lumara.id/services#bookkeeping) and the [bookkeeping cost guide](/blog/foundations/bookkeeping-costs-bali) for the starting price and its limits. If records are scattered, begin with the [clean-start checklist](/blog/foundations/clean-start).

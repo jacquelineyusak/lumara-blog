@@ -48,4 +48,4 @@ The [official OSS LKPM preparation-stage guide](https://s3.oss.go.id/oss/cms/Lap
 
 Do not reuse an old reporting date without checking it. Confirm the current period and window in OSS and the relevant official announcement. This preparation guide does not set a statutory deadline or determine whether a particular company must report.
 
-Lumara offers [LKPM and business compliance support](https://lumara.id/services/compliance). Share the business type, current reporting position and any outstanding questions to establish the scope. Related reading: [keep a company compliance register](/blog/compliance/compliance-checklist).
+Lumara offers [LKPM and business compliance support](https://lumara.id/services#compliance). Share the business type, current reporting position and any outstanding questions to establish the scope. Related reading: [keep a company compliance register](/blog/compliance/compliance-checklist).

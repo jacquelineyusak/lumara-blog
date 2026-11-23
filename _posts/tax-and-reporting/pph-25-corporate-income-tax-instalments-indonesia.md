@@ -81,6 +81,8 @@ An eligible company may apply for a reduction when its circumstances change and 
 
 Include PPh 25 instalments paid for the relevant tax year among the company’s tax credits in its annual return. The annual calculation shows whether the company owes a balance after eligible credits. If a balance is payable, settle it before filing the annual return. [Indonesian Income Tax Law, Articles 28 and 29](https://www.pajak.go.id/sites/default/files/2023-05/SDSN%202023%207.1_0.pdf)
 
+Use the return guide when you are ready to reconcile those credits against the year’s tax and complete the filing. [Corporate income tax return in Indonesia](/blog/tax-and-reporting/corporate-income-tax-return-indonesia)
+
 ## Discuss your company’s instalments with Lumara
 
 Keep the calculation, validated payments and annual tax reconciliation together so your team can see what has been paid and what is still due. See our [guide to monthly tax reporting in Indonesia](/blog/tax-and-reporting/monthly-tax-reporting-indonesia) and our [year-end accounting guide](/blog/tax-and-reporting/year-end-accounting-services-indonesia) for the other records that support your annual return.

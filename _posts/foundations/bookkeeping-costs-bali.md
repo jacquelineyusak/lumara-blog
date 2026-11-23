@@ -14,7 +14,7 @@ The final quote depends on the company’s workload and the support required. Us
 
 ## What the starting bookkeeping scope covers
 
-The published [bookkeeping service](https://lumara.id/services/bookkeeping) includes daily income and expense recording, document organization, transaction categorization, bank and cash reconciliation, accounts-payable tracking, general-ledger maintenance, monthly financial closing and tax-ready records.
+The published [bookkeeping service](https://lumara.id/services#bookkeeping) includes daily income and expense recording, document organization, transaction categorization, bank and cash reconciliation, accounts-payable tracking, general-ledger maintenance, monthly financial closing and tax-ready records.
 
 Before accepting a quote, agree how the provider counts transactions and accounts, which period the work begins with, and what happens if the workload exceeds the quoted limits. Also confirm the files or reports you will receive and the information your team must supply.
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import { BlogCard, CategoryNav, Header, PageContainer, SiteFooter } from "@/components/blog-ui";
@@ -56,7 +57,7 @@ export default function HomePage() {
             <>
               <article className="featured-story">
                 <Link href={featured.routePath} className="featured-story__image-link" aria-label={featured.title}>
-                  <img src={featured.coverImage} alt="" className="featured-story__image" />
+                  <Image src={featured.coverImage} alt="" width={1536} height={1024} sizes="(max-width: 860px) calc(100vw - 48px), (max-width: 1228px) 54vw, 658px" className="featured-story__image" />
                   <span className="featured-story__image-label">Featured note</span>
                 </Link>
                 <div className="featured-story__copy">
@@ -64,7 +65,7 @@ export default function HomePage() {
                   <h2><Link href={featured.routePath}>{featured.title}</Link></h2>
                   <p className="story-date">{featured.formattedDate} · {featured.readingTime} min read</p>
                   <p className="story-excerpt">{featured.excerpt}</p>
-                  <div className="story-author"><img src={featured.author.picture} alt="" /><span>By {featured.author.name}</span></div>
+                  <div className="story-author"><Image src={featured.author.picture} alt="" width={36} height={36} /><span>By {featured.author.name}</span></div>
                   <Link className="text-link" href={featured.routePath}>Read the note <ArrowRight size={17} aria-hidden="true" /></Link>
                 </div>
               </article>

@@ -46,4 +46,4 @@ A weekly review keeps the list small. At month-end, confirm which accounts and d
 
 The first handover to a bookkeeper should include the period covered, the account list, the available records and the known gaps. Agree how future files will be shared and who will answer questions from the business.
 
-Lumara’s [bookkeeping service](https://lumara.id/services/bookkeeping) includes record organization, transaction categorization, bank and cash reconciliation, and monthly financial closing within the agreed scope. If you are changing providers, use the [accountant handover checklist](/blog/foundations/switching-accountants).
+Lumara’s [bookkeeping service](https://lumara.id/services#bookkeeping) includes record organization, transaction categorization, bank and cash reconciliation, and monthly financial closing within the agreed scope. If you are changing providers, use the [accountant handover checklist](/blog/foundations/switching-accountants).

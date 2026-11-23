@@ -53,6 +53,8 @@ If your payroll and bank records are hard to match, Lumara can help trace pay an
 
 The general payment and filing deadlines move to the next working day when they fall on a holiday covered by the rules. [PMK 81/2024 as amended, Articles 94, 100, 171 and 173](https://jdih.kemenkeu.go.id/dok/pmk-81-tahun-2024) · [DJP reporting amendment PER-12/PJ/2026](https://pajak.go.id/id/peraturan/perubahan-atas-peraturan-direktur-jenderal-pajak-nomor-11pj2025-tentang-ketentuan) · [DJP's Coretax resource guide](https://www.pajak.go.id/id/reformdjp/coretax)
 
+For December payroll or an earlier departure, use the final-period guide to reconcile what you withheld and prepare the certificate. [Year-end PPh 21 reconciliation and BPA1](/blog/tax-and-reporting/pph-21-year-end-withholding-indonesia)
+
 ## Common payroll mistakes
 
 - Using the bank transfer list as the payroll register, which leaves gross compensation and deductions unexplained.

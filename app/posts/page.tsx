@@ -8,5 +8,5 @@ export const revalidate = 3600;
 
 export default function PostsPage() {
   const posts = getAllPosts();
-  return <><Header /><main id="main-content"><PageContainer><header className="page-heading"><p className="eyebrow">The archive</p><h1>All Lumara <em>notes.</em></h1><p>A practical library for the systems, deadlines, and decisions that keep a business clear and current.</p></header><CategoryNav categories={getCategories()} /><section className="category-stories"><div className="story-grid">{posts.map((post) => <BlogCard key={post.routePath} post={post} />)}</div></section></PageContainer></main><SiteFooter /></>;
+  return <><Header /><main id="main-content"><PageContainer><header className="page-heading"><p className="eyebrow">The archive</p><h1>All Lumara <em>notes.</em></h1><p>A practical library for the systems, deadlines, and decisions that keep a business clear and current.</p></header><CategoryNav categories={getCategories()} /><section className="category-stories"><div className="story-grid">{posts.map((post, index) => <BlogCard key={post.routePath} post={post} eager={index === 0} />)}</div></section></PageContainer></main><SiteFooter /></>;
 }

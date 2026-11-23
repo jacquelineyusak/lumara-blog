@@ -48,4 +48,4 @@ For Indonesian tax-system access, refer to the account-role guidance linked from
 
 At the first review, confirm the account list, opening position, outstanding tasks and upcoming internal deadlines. Agree how documents will be shared, who answers questions and what the business receives after each close.
 
-Lumara can scope [bookkeeping](https://lumara.id/services/bookkeeping), [tax reporting](https://lumara.id/services/tax-reporting) and [compliance support](https://lumara.id/services/compliance) separately or together. Start by sharing the business type, intended handover date and known gaps. The [bookkeeping cost guide](/blog/foundations/bookkeeping-costs-bali) explains the published starting scope and what to clarify in a quote.
+Lumara can scope [bookkeeping](https://lumara.id/services#bookkeeping), [tax reporting](https://lumara.id/services#tax-reporting) and [compliance support](https://lumara.id/services#compliance) separately or together. Start by sharing the business type, intended handover date and known gaps. The [bookkeeping cost guide](/blog/foundations/bookkeeping-costs-bali) explains the published starting scope and what to clarify in a quote.

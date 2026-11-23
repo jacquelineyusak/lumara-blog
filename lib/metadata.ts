@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import type { Post } from "./blog";
+import { defaultCoverImage, type Post } from "./blog";
 import { absoluteAssetUrl, authorUrl, siteUrl } from "./site-url";
 
 export function pageMetadata(title: string, description: string, routePath = ""): Metadata {
   const url = `${siteUrl()}${routePath}`;
-  const images = [{ url: absoluteAssetUrl("/blog/assets/blog/lumara-editorial.png"), width: 1536, height: 1024, alt: "Lumara Notes" }];
+  const images = [{ url: absoluteAssetUrl(defaultCoverImage), width: 1536, height: 1024, alt: "Lumara Notes" }];
   return {
     title: { absolute: `${title} | Lumara Notes` },
     description,
@@ -15,7 +15,7 @@ export function pageMetadata(title: string, description: string, routePath = "")
 }
 
 export function postMetadata(post: Post): Metadata {
-  const metadata = pageMetadata(post.title, post.excerpt, post.routePath);
+  const metadata = pageMetadata(post.seoTitle ?? post.title, post.excerpt, post.routePath);
   const image = absoluteAssetUrl(post.coverImage);
   return {
     ...metadata,
@@ -26,7 +26,7 @@ export function postMetadata(post: Post): Metadata {
       publishedTime: post.date,
       ...(post.updated ? { modifiedTime: post.updated } : {}),
       authors: [authorUrl],
-      images: [{ url: image }],
+      images: [{ url: image, width: 1536, height: 1024, ...(post.coverImageAlt ? { alt: post.coverImageAlt } : {}) }],
     },
     twitter: { ...metadata.twitter, images: [image] },
   };
