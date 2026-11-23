@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   applicationName: "Lumara Notes",
   authors: [{ name: "Lumara" }],
   creator: "Lumara",
-  icons: { icon: "/blog/brand-icon.svg" },
+  icons: { icon: "/blog/favicon.ico" },
   openGraph: {
     type: "website",
     siteName: "Lumara Notes",
