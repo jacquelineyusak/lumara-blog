@@ -45,9 +45,13 @@ function readingTime(value: string) {
   return Math.max(2, Math.ceil(value.trim().split(/\s+/).length / 190));
 }
 
+export function publicationDate(value: string) {
+  // Publication dates start at midnight in Bali.
+  return new Date(`${value}T00:00:00+08:00`);
+}
+
 function published(value: string) {
-  // A date becomes public at the start of that day in Bali, not after it ends.
-  return new Date(`${value}T00:00:00+08:00`) <= new Date();
+  return publicationDate(value) <= new Date();
 }
 
 function entries(directory: string) {
