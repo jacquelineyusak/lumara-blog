@@ -20,6 +20,7 @@ for (const filename of outputRoots.flatMap((directory) => htmlFiles(directory)))
   if (path.basename(filename).startsWith("_")) continue;
   const html = fs.readFileSync(filename, "utf8");
   if (/<meta name="robots" content="[^"]*noindex/.test(html)) continue;
+  assert.match(html, /<link rel="icon" href="\/blog\/brand-icon\.svg"[\s/>]/, `Missing Lumara favicon: ${filename}`);
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
   assert.ok(canonical, `Missing canonical: ${filename}`);
   assert.match(canonical[1], /^https:\/\/lumara\.id\/blog(?:\/|$)/, filename);
